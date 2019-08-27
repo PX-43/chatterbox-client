@@ -10,9 +10,11 @@ const styles = StyleSheet.create({
   name: {
     width: '60px',
     fontWeight: 'bold',
+    overflowWrap: 'break-word',
   },
   message: {
-    flex: '1',
+    flex: 1,
+    overflowWrap: 'break-word',
   }
 });
 
@@ -25,6 +27,6 @@ export const ChatItem: React.FC<ChatItemProps> =
     ({ name, message }) => (
         <div className={css(styles.container)}>
             <div className={css(styles.name)}>{name}</div>
-            <div className={css(styles.name)}>{message}</div>
+            <div className={css(styles.message)}>{message}</div>
         </div>
       );
