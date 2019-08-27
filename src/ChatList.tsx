@@ -7,9 +7,13 @@ interface ChatListProps {
 }
 
 export const ChatList: React.FC<ChatListProps> = ({ messageList }) => {
-  const items = messageList.map(item =>
-       <ChatItem key={item.id} name={item.own ? 'me' : item.sender} message={item.message}/>);
+  const items = messageList.map(item => (
+    <ChatItem
+      key={item.id}
+      name={item.own ? 'me' : item.sender}
+      message={item.message}
+    />
+  ));
 
   return <div>{items}</div>;
 };
-

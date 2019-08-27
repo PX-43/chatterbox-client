@@ -3,12 +3,20 @@
     "tslint:recommended",
     "tslint-react-hooks",
     "tslint-config-airbnb-base",
-    "tslint-react-recommended"
+    "tslint-react-recommended",
+    "tslint-plugin-prettier"
   ],
   "rules": {
     "max-line-length": {
       "options": [120]
     },
+    "prettier": [
+      true,
+      {
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ],
     "quotemark": [true, "single", "jsx-double"],
     "object-literal-sort-keys": false,
     "arrow-parens": [true, "ban-single-arg-parens"],

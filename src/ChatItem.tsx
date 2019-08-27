@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   message: {
     flex: 1,
     overflowWrap: 'break-word',
-  }
+  },
 });
 
 interface ChatItemProps {
@@ -23,10 +23,9 @@ interface ChatItemProps {
   message: string;
 }
 
-export const ChatItem: React.FC<ChatItemProps> =
-    ({ name, message }) => (
-        <div className={css(styles.container)}>
-            <div className={css(styles.name)}>{name}</div>
-            <div className={css(styles.message)}>{message}</div>
-        </div>
-      );
+export const ChatItem: React.FC<ChatItemProps> = ({ name, message }) => (
+  <div className={css(styles.container)}>
+    <div className={css(styles.name)}>{name}</div>
+    <div className={css(styles.message)}>{message}</div>
+  </div>
+);
